@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import Item from "./Item";
 
 function Submit(props) {
@@ -8,10 +8,6 @@ function Submit(props) {
       return (number = new Item(number));
     })
   );
-
-  useEffect(() => {
-    console.log(rating);
-  }, [rating]);
 
   function onSelect(item) {
     console.log(item);
@@ -32,7 +28,7 @@ function Submit(props) {
     <div className="submit">
       <ul>
         {rating.map((item) => (
-          <li
+          <li key={item.value} className={item.checked ? "selected" : ""}
             onClick={(event) => {
               onSelect(item);
             }}
@@ -41,7 +37,7 @@ function Submit(props) {
           </li>
         ))}
       </ul>
-      <button className="submittButton">SUBMIT</button>
+      <button onClick={()=>{props.onSubmitButton(rating)}} className="submittButton">SUBMIT</button>
     </div>
   );
 }

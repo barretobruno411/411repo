@@ -24,6 +24,7 @@ body {
 }
 
 .container {
+  min-width: 300px;
   max-width: 300px;
   border-radius: 12px;
   padding: 25px;
@@ -93,7 +94,7 @@ body {
   color: var(--White);
 }
 
-.selected{
+ul .selected{
   background-color: var(--Orange);
   color: var(--White);
 }
@@ -117,4 +118,42 @@ body {
 .submittButton:hover{
   background-color: var(--White);
   color: var(--Orange);
+}
+
+.thanksImg{
+  display: block;
+  margin: auto;
+}
+
+.result{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: var(--Dark-Blue);
+  color: var(--Orange);
+  margin-top: 22px;
+}
+
+.submitTitle{
+
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight: 700;
+
+}
+
+.submitContent{
+
+  text-align:center;
+  color: var(--Light-Grey);
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 400;
 }
